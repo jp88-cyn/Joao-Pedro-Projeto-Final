@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'P3';     /* Nome da fonte */
+  src: url('fonts/BMSPA___.TTF') format('truetype'); /* Caminho para o arquivo da fonte */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+    margin: 0%;
+    padding: 0%;
+
+    height: 100%;
+    
+}
+
+header {
+    margin: 0px;
+    padding: 50px;
+    background-color: #041cb1;
+}
+
+.nav-links { /* Seus links dentro de uma div ou nav */
+    display: flex;
+    gap: 100px; /* Espaço de 30px entre cada link */
+}
+
+.link-header {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'P3';
+}
+
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+  
+  background: url(images/bg4.jpg) no-repeat ;
+  background-size: cover;
+
+  
+  
+
+}
+
+.caixa-principal {
+    background: #0eb1f4;
+    color: aliceblue;
+
+    width: 50vw;
+    height: 300vh;
+    
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+
+    gap: 20px; 
+
+    font-family: url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+img {
+    width: 130px;
+    height: 100px;
+
+    left: -100px;
+}
+
+.logo-p3 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .caixa-principal {
+        width: 80vw;
+        height: auto;
+        min-height: 40vh;
+        flex-direction: column;
+    }
+}
+
+footer {
+    margin: 0px;
+    padding: 50px;
+    
+    background: url(images/persona-3-reload-header_feature.jpg);
+    
+    border-style: groove;
+    border-color: #041cb1;
+    border-radius: 1px;
+}
