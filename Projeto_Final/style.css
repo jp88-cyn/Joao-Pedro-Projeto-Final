@@ -3,8 +3,20 @@
   src: url('fonts/BMSPA___.TTF') format('truetype'); /* Caminho para o arquivo da fonte */
 }
 
+@font-face {
+  font-family: 'settled';     /* Nome da fonte */
+  src: url('fonts/Inconsolata-VariableFont_wdth\,wght.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --fontp3--: 'P3';
+    --corheader: #041cb1;
+    --fontnormal: 'settled'
+
+}
 
 
 body {
@@ -13,12 +25,16 @@ body {
 
     height: 100%;
     
+    background: #041cb1;
+    
 }
 
 header {
+    display: flex;
     margin: 0px;
     padding: 50px;
     background-color: #041cb1;
+    flex-wrap: wrap;
 }
 
 .nav-links { /* Seus links dentro de uma div ou nav */
@@ -44,22 +60,24 @@ main {
   
   background: url(images/bg4.jpg) no-repeat ;
   background-size: cover;
-
+  flex-wrap: wrap;
   
   
 
 }
 
 .caixa-principal {
+    
     background: #0eb1f4;
     color: aliceblue;
 
     width: 50vw;
-    height: 300vh;
+    height: 350vh;
     
-
+    margin: 100px;
     padding: 20px;
     box-sizing: border-box;
+    
 
     
     flex-direction: column; 
@@ -68,10 +86,48 @@ main {
 
     gap: 20px; 
 
-    font-family: url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    font-family: var(--fontnormal);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
+    flex-wrap: wrap;
+
+}
+
+.links-principal {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+
+}
+
+.link {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.icone-link {
+    width: 25px;
+    height: 25px;
+
+    
+}
+
+.icone-link-atlus {
+    width: 40px;
+    height: 30px;
+
+    
+}
+
+.icones-principal {
+    padding: 0px;
+    
+
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -79,6 +135,84 @@ img {
     height: 100px;
 
     left: -100px;
+}
+
+.video {
+    width: 670px;
+    height: 520px;
+    max-width: auto;
+
+    border-radius: 10px;
+    box-shadow: #041cb1;
+    transition: all 0.3s ease;
+    
+    
+}
+
+.char-bg {
+    padding: 20px;
+    margin: 0;
+    width: 910px;
+    height: 300px;
+    border-radius: 50px;
+    background: #041cb1;
+    opacity: 0.8;
+    overflow: auto; /* Ativa a rolagem */
+
+    /* Personalização para Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #041cb1 rgba(0, 0, 0, 0.2);
+
+    border-style: double;
+    box-shadow: #202020;
+}
+
+/* Personalização para Chrome/Edge/Safari */
+.char-bg::-webkit-scrollbar {
+    width: 12px;
+}
+.char-bg::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.char-bg::-webkit-scrollbar-thumb {
+    background: #041cb1;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.char-bg::-webkit-scrollbar-thumb:hover {
+    background: #0a2ae0;
+}
+
+
+
+h1 {
+    font-family: var(--fontp3--);
+    color: aliceblue;
+    justify-self: center;
+}
+
+.char-texto {
+    font-family: var(--fontnormal);
+    color: aliceblue;
+    justify-self: center;
+}
+
+.conteudo {
+box-shadow: #202020;
+padding: 80px;
+margin: 0;
+}
+
+.char-bg, .img-png, .conteudo {
+    display: inline-block;  /* Método alternativo (menos flexível) */
+    vertical-align: top;    /* Alinha ao topo (evita desalinhamentos) */
+    margin-right: 20px;     /* Espaçamento entre as divs */
+    flex-wrap: wrap;
+}
+
+.container-flex {
+    flex-wrap: wrap;  /* Permite quebra de linha */
 }
 
 .logo-p3 {
@@ -93,16 +227,83 @@ img {
         height: auto;
         min-height: 40vh;
         flex-direction: column;
+
+    }
+
+    .char-bg {
+        width: 80vw;
+        height: auto;
+        min-height: 40vh;
+        flex-direction: column;
     }
 }
 
 footer {
     margin: 0px;
-    padding: 50px;
+    padding: 30px;
     
-    background: url(images/persona-3-reload-header_feature.jpg);
+    background-image: linear-gradient(
+        rgb(18, 21, 194),
+        rgb(255, 255, 255)
+    );
+    background-size: 1300px 384px;
     
-    border-style: groove;
-    border-color: #041cb1;
-    border-radius: 1px;
+    
+    
+    color: antiquewhite;
+    font-family: 'settled';
+    
+    /* Adicione estas propriedades para alinhamento horizontal */
+    display: flex;
+    justify-content: space-around; /* ou space-between, center, etc. */
+    align-items: center; /* alinha verticalmente no centro */
+    flex-wrap: wrap; /* permite que os itens quebrem para nova linha se necessário */
+
+    box-shadow: #202020;
+    
+}
+
+
+.img-makoto {
+    width: 150px;
+    height: 395px;
+
+    
+    box-shadow: #202020;
+    transition: all 0.3s ease;
+}
+
+.img-yukari {
+    width: 200px;
+    height: 400px;
+
+    
+    box-shadow: #202020;
+    transition: all 0.3s ease;
+}
+
+.img-junpei {
+    width: 250px;
+    height: 420px;
+
+    
+    box-shadow: #202020;
+    transition: all 0.3s ease;
+}
+
+.img-aigis {
+    width: 190px;
+    height: 420px;
+
+    box-shadow: #202020;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1440px){
+
+    .video {
+        max-width: auto;
+    
+    }
+
 }
