@@ -29,6 +29,8 @@ body {
     
 }
 
+
+
 header {
     display: flex;
     margin: 0px;
@@ -307,3 +309,81 @@ footer {
     }
 
 }
+
+.arcana-div {
+    left: -500px;
+    width: 300px;
+
+    margin: 100px;
+    padding: 30px;
+    border-radius: 20px;
+    
+    
+    
+
+    background: #0a2ae0;
+    color: aliceblue;
+
+    font-family: var(--fontnormal);
+
+    
+    
+    
+}
+
+.arcana {
+    width: 300px;
+    height: 400px;
+}
+
+.arcana-text {
+    color: aliceblue;
+    font-family: var(--fontp3--);
+
+    
+    
+}
+
+.caixa-principal-2 {
+    
+    background: #0eb1f4;
+    color: aliceblue;
+
+    width: 50vw;
+    height: 60vh;
+    
+    margin: 35px;
+    padding: 20px;
+    box-sizing: border-box;
+    
+
+    
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+
+    gap: 20px; 
+
+    font-family: var(--fontnormal);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    flex-wrap: wrap;
+
+    
+
+}
+
+.section-contain {
+    
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+
+/* git clone git@github.com:jp88-cyn/j4c.git */
