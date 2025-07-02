@@ -37,6 +37,7 @@ header {
     padding: 50px;
     background-color: #041cb1;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-links { /* Seus links dentro de uma div ou nav */
@@ -51,6 +52,14 @@ header {
     text-decoration: none;
     font-size: larger;
     font-family: 'P3';
+    transition: 0.5s;
+    
+    
+}
+
+.link-header:hover {
+    text-shadow: #ffffff;
+    opacity: 0.3;
 }
 
 .icon-header {
@@ -99,6 +108,7 @@ main {
     gap: 20px; 
 
     font-family: var(--fontnormal);
+    font-weight: bolder;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
@@ -204,7 +214,7 @@ iframe {
     box-shadow: #202020;
 }
 
-/* Personalização para Chrome/Edge/Safari */
+
 .char-bg::-webkit-scrollbar {
     width: 12px;
 }
@@ -312,6 +322,10 @@ footer {
     transition: all 0.3s ease;
 }
 
+.img-makoto:hover {
+    transform: rotate(8deg);
+}
+
 .img-yukari {
     width: 250px;
     height: 500px;
@@ -320,6 +334,11 @@ footer {
     box-shadow: #202020;
     transition: all 0.3s ease;
     filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.5));
+}
+
+.img-yukari:hover {
+    transform: rotate(8deg);
+
 }
 
 .img-junpei {
@@ -332,6 +351,11 @@ footer {
     filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.5));
 }
 
+.img-junpei:hover {
+
+    transform: rotate(8deg);
+}
+
 .img-aigis {
     width: 190px;
     height: 500px;
@@ -339,6 +363,10 @@ footer {
     box-shadow: #202020;
     transition: all 0.3s ease;
     filter: drop-shadow(5px 5px 5px rgba(255, 255, 255, 0.5));
+}
+
+.img-aigis:hover {
+    transform: rotate(8deg);
 }
 
 @media (max-width: 1440px){
@@ -365,10 +393,16 @@ footer {
     color: aliceblue;
 
     font-family: var(--fontnormal);
+    opacity: 0.5;
 
     
     
     
+}
+
+.arcana-div:hover {
+    opacity: 1;
+    transition: 0.6s;
 }
 
 .arcana {
@@ -376,11 +410,7 @@ footer {
     height: 400px;
 }
 
-.arcana:hover {
-    opacity: 0.8;
-    transition: 2.0s;
-    
-}
+
 
 .arcana-text {
     color: aliceblue;
@@ -411,6 +441,7 @@ footer {
     gap: 20px; 
 
     font-family: var(--fontnormal);
+    font-weight: bolder;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
@@ -444,11 +475,42 @@ footer {
 }
 
 
+.links-principal {
+    display: flex;
+    position: relative;
+    padding: 20px;
+    margin: 0px;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+hr {
+    
+}
+
+.album-cover {
+    width: 550px;
+    height: 540px;
+    box-shadow: #250ef4;
+    filter: drop-shadow(5px 5px 5px rgba(27, 12, 230, 0.5));
+    
+}
+
+h2 {
+    color: aliceblue;
+    font-family: var(--fontp3--);
+}
+
+
 /* git clone git@github.com:jp88-cyn/j4c.git */
 
 /*
 Coisas pra fazer :
-- Aumentar a Grossura da Fonte
+
 - Alinhar os personagens com o Texto e Adicionar mais personagens 
 - Fazer o Musica Area
-- Melhorar o Header & Footer 
+- Melhorar o Header & Footer , No caso colocar os icones de footer igual ao do site 
+- Extra: Adicionar uma transiçao onde começa com a parte de tras da carta, e depois muda para a imagem em si da arcana
+com tambem aparecendo a descriçao dela junto
