@@ -60,6 +60,7 @@ header {
 .link-header:hover {
     text-shadow: #ffffff;
     opacity: 0.3;
+    color: #0eb1f4;
 }
 
 .icon-header {
@@ -241,6 +242,7 @@ h1 {
 
 .char-texto {
     font-family: var(--fontnormal);
+    font-weight: bolder;
     color: aliceblue;
     justify-self: center;
 }
@@ -288,11 +290,12 @@ margin: 0;
 footer {
     margin: 0px;
     padding: 30px;
+    background: #0eb1f4;
     
-    background-image: linear-gradient(
+    /*background-image: linear-gradient(
         rgb(18, 21, 194),
         rgb(255, 255, 255)
-    );
+    ); */
     background-size: 1300px 384px;
     
     
@@ -394,20 +397,34 @@ footer {
 
     font-family: var(--fontnormal);
     opacity: 0.5;
+    perspective: 1000px;
+    
+    
+    
+}
 
-    
-    
-    
+.arcana__content {
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 600ms ease-in-out
+
 }
 
 .arcana-div:hover {
     opacity: 1;
     transition: 0.6s;
+    transform: rotate3d(30deg);
 }
 
 .arcana {
     width: 300px;
     height: 400px;
+    transition:  transform 2s ease-in-out;
+
+}
+
+.arcana:hover {
+    transform: rotate3d(1, 1, 1, 45deg);
 }
 
 
@@ -503,14 +520,19 @@ h2 {
     font-family: var(--fontp3--);
 }
 
+.caixa {
+    justify-content: center;
+    
+}
+
 
 /* git clone git@github.com:jp88-cyn/j4c.git */
+/* https://www.figma.com/@rocketseat */
 
 /*
 Coisas pra fazer :
 
-- Alinhar os personagens com o Texto e Adicionar mais personagens 
-- Fazer o Musica Area
-- Melhorar o Header & Footer , No caso colocar os icones de footer igual ao do site 
-- Extra: Adicionar uma transiçao onde começa com a parte de tras da carta, e depois muda para a imagem em si da arcana
-com tambem aparecendo a descriçao dela junto
+- Ver um Video ensinando a como Girar a Carta que gira
+- fazer a proxima musica começar automaticamente apos a ultima acabar
+- rework na area de personagens ( as imagens tao de um jeito horrivel btw )
+

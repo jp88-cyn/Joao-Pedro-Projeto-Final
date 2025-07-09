@@ -6,6 +6,7 @@
     <title>P3 RELOAD</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -16,29 +17,44 @@
             <a href="personagens.html" class="link-header">Personagens</a>
             <a href="arcanas.html" class="link-header">Arcanas</a>
             <a href="musica.html" class="link-header">Musicas</a>
-            <img src="images/p3r_alt.png" alt="iconeP3" class="icon-header">
+            
 
         </nav>
     </header>
 
-    <main>
-    <section>
-        <div class="caixa-musica">
+     <main>
+        <div class="player">
 
-            <h2> Insira Musica Aqui </h2>
-            <hr>
-            <img src="images/album.jpg" alt="albumcover" class="album-cover">
-            
+    <div class="logoMusic">
+        <img src="images/album.jpg" alt="Banner" class="banner">
+    </div>
+    
+    <span id="musicName"></span>
+    
+    <audio id="player" src=""></audio>
+    <div class="controls">
+      <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
+      <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
+      <button id="nextButton"><i class='bx bx-skip-next'></i></button>
+    </div>
+    <div class="footer2">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <div class="time">
+        <span id="currentTime">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
 
-        </div>
-    </section>
-    </main>
-
+     </main>
 
     <footer>
-        <p>Todos os Direitos Reservados para ©ATLUS</p>
+        <p>Todos os direitos reservados para ©ATLUS</p>
 
-        <p> Criado por João Pedro, Como projeto de estudos</p>
+        <p> Criado por João Tompson, Como projeto de estudos</p>
 
         <div class="links-principal">
                 
@@ -49,6 +65,115 @@
 
 
     </footer>
+
+    <style>
+
+
+
+
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  max-width: 9000px;
+  width: 500px;
+  height: 650px;
+  margin: 0 10px;
+  box-shadow: 0 1px 10px rgb(38, 0, 255);
+  padding: 50px;
+  border-radius: 5px;
+  background: #041cb1;
+  
+}
+
+.logoMusic {
+  
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.logoMusic i {
+  font-size: 200px;
+}
+
+.banner {
+    width: 800px;
+    height: 400px;
+    padding: 40px;
+}
+
+#musicName {
+  white-space: nowrap; 
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 30px;
+  color: #f7f7f7;
+  font-family: var(--fontp3--);
+  font-size: 20px;
+}
+
+.controls button {
+  border: none;
+  background-color: #041cb1;
+  cursor: pointer;
+}
+
+.controls i {
+  font-size: 60px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #10b2f3;
+  transition: all .2s;
+}
+
+.controls i:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time span {
+    font-family: var(--fontnormal--);
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.footer2 {
+  width: 100%;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #ddd;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 8px;
+  background-color: #10b2f3;
+  border-radius: 5px;
+}
+    </style>
 
     
     
